@@ -1,13 +1,19 @@
 import NextAuth from 'next-auth';
-import GithubProvider from 'next-auth/providers/discord';
+import DiscordProvider from 'next-auth/providers/discord';
+import GitHubProvider from 'next-auth/providers/github';
 
 export const authOptions = {
   // Configure one or more authentication providers
   providers: [
-    GithubProvider({
+    DiscordProvider({
       clientId: process.env.DISCORD_ID!,
       clientSecret: process.env.DISCORD_SECRET!,
     }),
+    GitHubProvider({
+      clientId: process.env.GITHUB_ID!,
+      clientSecret: process.env.GITHUB_SECRET!,
+    }),
+
     // ...add more providers here
   ],
 };

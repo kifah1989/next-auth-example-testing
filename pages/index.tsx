@@ -6,8 +6,7 @@ export default function Home({ name }: any) {
 
   return (
     <Layout>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
+      <pre>{JSON.stringify(data, null, 1)}</pre>
     </Layout>
   );
 }
-
